@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DogHappiness : MonoBehaviour
 {
@@ -85,6 +86,7 @@ public class DogHappiness : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.S))
         {
+            SceneManager.LoadScene(1);
             walkHappiness += 25;
             washHappiness -= 10;
             eatHappiness -= 5;
