@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    private float time = 30;
+    private float time = 10;
     public Text timeText;
     public bool gameOver = false;
     // Start is called before the first frame update
@@ -19,10 +19,20 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(gameOver == false && time > 0)
+        if (gameOver == false && time > 0)
         {
             StartCoroutine(TimerTake());
         }
+        else if(gameOver == false && time <=0)
+        {
+            Debug.Log("WIN");
+        }
+        
+           
+        
+  
+  
+        
     }
 
     IEnumerator TimerTake()

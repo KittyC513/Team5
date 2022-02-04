@@ -49,13 +49,19 @@ public class DogHappiness : MonoBehaviour
 
     void DogHappinessControls()
     {
+
+        Debug.Log("energy decrease is " + energyDecrease);
+        Debug.Log("hours decrease is " + hoursDecrease);
+
         if (energyDecrease > energy)
         {
             canDoSomething = false;
+            
         }
         else
         {
             canDoSomething = true;
+            
         }
 
         if (hoursDecrease > hours)
@@ -69,64 +75,101 @@ public class DogHappiness : MonoBehaviour
 
         
 
-       // if (canDoSomething == false) return;
-       // if (canDoMore == false) return;
+       
+       
 
         if (Input.GetKeyDown(KeyCode.A))
         {
+            hoursDecrease = 0.25f;
+            energyDecrease = 5;
+
+
+
+            if (energyDecrease > energy) return;
+            if (hoursDecrease > hours) return;
+
             petHappiness += 20;
             walkHappiness -= 1;
             eatHappiness -= 1;
             washHappiness -= 1;
-            hoursDecrease = 0.25f;
+
             hours -= hoursDecrease;
-            energyDecrease = 5;
             energy -= energyDecrease;
         }
 
         if (Input.GetKeyDown(KeyCode.S))
         {
+
             SceneManager.LoadScene(1);
+            energyDecrease = 20;
+            hoursDecrease = 1f;
+
+
+
+            if (energyDecrease > energy) return;
+            if (hoursDecrease > hours) return;
+     
+
             walkHappiness += 25;
             washHappiness -= 10;
             eatHappiness -= 5;
             petHappiness -= 1;
-            hoursDecrease = 1f;
+            
             hours -= hoursDecrease;
-            energyDecrease = 20;
             energy -= energyDecrease;
         }
 
         if (Input.GetKeyDown(KeyCode.D))
         {
+            
+           
+
+            
+            hoursDecrease = 0.25f;
+            energyDecrease = 5;
+
+            if (energyDecrease > energy) return;
+            if (hoursDecrease > hours) return;
+
             eatHappiness += 20;
             walkHappiness -= 1;
             washHappiness -= 1;
             petHappiness -= 1;
-            hoursDecrease = 0.5f;
+            
             hours -= hoursDecrease;
-            energyDecrease = 5;
+            
             energy -= energyDecrease;
         }
 
         if (Input.GetKeyDown(KeyCode.W))
         {
+            hoursDecrease = 0.5f;
+            energyDecrease = 15;
+
+            if (energyDecrease > energy) return;
+            if (hoursDecrease > hours) return;
+
             washHappiness += 25;
             petHappiness -= 5;
             eatHappiness -= 1;
             walkHappiness -= 1;
-            hoursDecrease = 0.5f;
+            
             hours -= hoursDecrease;
-            energyDecrease = 15;
             energy -= energyDecrease;
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            amountOfHomeworkLeft -= 2;
             energyDecrease = 50;
-            energy -= energyDecrease;
             hoursDecrease = 2f;
+
+            if (energyDecrease > energy) return;
+            if (hoursDecrease > hours) return;
+
+            amountOfHomeworkLeft -= 2;
+            
+            energy -= energyDecrease;
+            
             hours -= hoursDecrease;
 
             washHappiness -= 10;
@@ -198,12 +241,16 @@ public class DogHappiness : MonoBehaviour
             canDoMore = true;
         }
 
-        if (canDoMore == false) return;
+        
 
         if (Input.GetKeyDown(KeyCode.N))
         {
-            energy += 50;
             hoursDecrease = 1f;
+
+            if (hoursDecrease > hours) return;
+
+            energy += 50;
+            
             hours -= hoursDecrease;
             washHappiness -= 5;
             petHappiness -= 5;
