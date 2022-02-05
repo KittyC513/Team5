@@ -11,7 +11,7 @@ public class ObstaclesMovement : MonoBehaviour
     public GameObject player;
     bool gameEnd = false;
 
-   
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,26 +25,15 @@ public class ObstaclesMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.y > screenBounds.y * 2)
+        if (transform.position.y > screenBounds.y * 2)
         {
             Destroy(this.gameObject);
         }
 
-        if(gameEnd == true)
+        if (gameEnd == true)
         {
             SceneManager.LoadScene(2);
         }
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject == player)
-        {
-            Destroy(this.gameObject);
-            gameEnd = true;
-        }
-    }
-
- 
-
 }
+

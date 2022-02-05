@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DogController : MonoBehaviour
 {
+    bool gameEnd = false;
     [SerializeField] private Camera mainCamera;
     // Start is called before the first frame update
     void Start()
@@ -23,8 +25,21 @@ public class DogController : MonoBehaviour
 
 
         // Debug.DrawLine(dogPosition, mouseWorldPosition, Color.black);
+        if(gameEnd == true)
+        {
+            SceneManager.LoadScene(2);
+        }
 
+    }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Obstcle")
+        {
+            Destroy(other.gameObject);
+            Debug.Log("Hello");
+            gameEnd = true;
+        }
     }
 
 
