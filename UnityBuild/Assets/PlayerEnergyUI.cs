@@ -19,7 +19,7 @@ public class PlayerEnergyUI : MonoBehaviour
 
     private void Start()
     {
-        energy = energyIcons.Length;
+        //energy = energyIcons.Length;
 
     }
     void Update()
