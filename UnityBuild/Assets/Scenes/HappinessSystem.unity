@@ -474,7 +474,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 310849558}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1689233024}
+        m_TargetAssemblyTypeName: PlayerEnergyUI, Assembly-CSharp
+        m_MethodName: EnergyRegaining
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &310849558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -601,7 +613,7 @@ GameObject:
   - component: {fileID: 353989692}
   - component: {fileID: 353989691}
   m_Layer: 5
-  m_Name: HomeWork
+  m_Name: Study
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -670,7 +682,67 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 353989692}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1689233023}
+        m_TargetAssemblyTypeName: DogHappinessSystem, Assembly-CSharp
+        m_MethodName: DecreaseEnergyalue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1689233024}
+        m_TargetAssemblyTypeName: PlayerEnergyUI, Assembly-CSharp
+        m_MethodName: EnergySpending
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1689233023}
+        m_TargetAssemblyTypeName: DogHappinessSystem, Assembly-CSharp
+        m_MethodName: DecreaseFunValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 15
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1689233023}
+        m_TargetAssemblyTypeName: DogHappinessSystem, Assembly-CSharp
+        m_MethodName: DecreaseHungryValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1689233023}
+        m_TargetAssemblyTypeName: DogHappinessSystem, Assembly-CSharp
+        m_MethodName: DecreaseHygieneValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &353989692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1331,7 +1403,67 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 482813420}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1689233023}
+        m_TargetAssemblyTypeName: DogHappinessSystem, Assembly-CSharp
+        m_MethodName: Walk
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1689233024}
+        m_TargetAssemblyTypeName: PlayerEnergyUI, Assembly-CSharp
+        m_MethodName: EnergySpending
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1689233023}
+        m_TargetAssemblyTypeName: DogHappinessSystem, Assembly-CSharp
+        m_MethodName: Entertain
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1689233023}
+        m_TargetAssemblyTypeName: DogHappinessSystem, Assembly-CSharp
+        m_MethodName: DecreaseHungryValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 15
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1689233023}
+        m_TargetAssemblyTypeName: DogHappinessSystem, Assembly-CSharp
+        m_MethodName: DecreaseHygieneValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 20
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &482813420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1388,7 +1520,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &488878693
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1635,7 +1767,67 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 556897002}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1689233023}
+        m_TargetAssemblyTypeName: DogHappinessSystem, Assembly-CSharp
+        m_MethodName: Entertain
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 15
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1689233024}
+        m_TargetAssemblyTypeName: PlayerEnergyUI, Assembly-CSharp
+        m_MethodName: EnergySpending
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1689233023}
+        m_TargetAssemblyTypeName: DogHappinessSystem, Assembly-CSharp
+        m_MethodName: DecreaseEnergyalue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1689233023}
+        m_TargetAssemblyTypeName: DogHappinessSystem, Assembly-CSharp
+        m_MethodName: DecreaseHungryValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1689233023}
+        m_TargetAssemblyTypeName: DogHappinessSystem, Assembly-CSharp
+        m_MethodName: DecreaseHygieneValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &556897002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2912,7 +3104,67 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1284533754}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1689233023}
+        m_TargetAssemblyTypeName: DogHappinessSystem, Assembly-CSharp
+        m_MethodName: Wash
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 20
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1689233024}
+        m_TargetAssemblyTypeName: PlayerEnergyUI, Assembly-CSharp
+        m_MethodName: EnergySpending
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1689233023}
+        m_TargetAssemblyTypeName: DogHappinessSystem, Assembly-CSharp
+        m_MethodName: DecreaseEnergyalue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1689233023}
+        m_TargetAssemblyTypeName: DogHappinessSystem, Assembly-CSharp
+        m_MethodName: DecreaseFunValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 20
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1689233023}
+        m_TargetAssemblyTypeName: DogHappinessSystem, Assembly-CSharp
+        m_MethodName: DecreaseHungryValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1284533754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3598,7 +3850,67 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1545871282}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1689233023}
+        m_TargetAssemblyTypeName: DogHappinessSystem, Assembly-CSharp
+        m_MethodName: Feed
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 25
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1689233024}
+        m_TargetAssemblyTypeName: PlayerEnergyUI, Assembly-CSharp
+        m_MethodName: EnergySpending
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1689233023}
+        m_TargetAssemblyTypeName: DogHappinessSystem, Assembly-CSharp
+        m_MethodName: DecreaseEnergyValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1689233023}
+        m_TargetAssemblyTypeName: DogHappinessSystem, Assembly-CSharp
+        m_MethodName: DecreaseFunValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1689233023}
+        m_TargetAssemblyTypeName: DogHappinessSystem, Assembly-CSharp
+        m_MethodName: DecreaseHygieneValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1545871282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4172,8 +4484,10 @@ MonoBehaviour:
   - {fileID: 786229872}
   - {fileID: 216585431}
   - {fileID: 2050733608}
-  fullEnergyIcons: {fileID: 21300000, guid: 6f1c3c9465c3f634ab31caea84735a66, type: 3}
-  emptyEnergyIcons: {fileID: 21300000, guid: 82ca7f3b8f60f61429e9a0823a997833, type: 3}
+  fullEnergyIcons: {fileID: 21300000, guid: 82ca7f3b8f60f61429e9a0823a997833, type: 3}
+  emptyEnergyIcons: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  spendingEnergy: 0
+  regainingEnergy: 0
 --- !u!1 &1759101152
 GameObject:
   m_ObjectHideFlags: 0

@@ -51,34 +51,143 @@ public class DogHappinessSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+
+
+
+
+
+
+
+    }
+    
+       
+
+
+    public void Feed(int feedValue)
+    {
+
+        if (currentEnergy >= maxHungry)
         {
-         
+            currentEnergy = maxEnergy;
+            hungryBar.SetHungry(currentHungry);
         }
+        else
+        {
+            currentHungry += 20;
+            hungryBar.SetHungry(currentHungry);
+        }
+
     }
 
-    void Feed(int feedValue)
+    public void DecreaseHungryValue(int hungeyValue)
     {
-        currentHungry -= 10;
-        hungryBar.SetHungry(currentHungry);
+        if (currentEnergy <= 0)
+        {
+            currentEnergy = 0;
+            hungryBar.SetHungry(currentHungry);
+        }
+        else
+        {
+            currentHungry -= 5;
+            hungryBar.SetHungry(currentHungry);
+        }
+
     }
 
-    void Entertain(int funValue) 
+    public void Entertain(int funValue) 
     {
-        currentFun -= 10;
-        funBar.SetFun(currentFun);
+        if (currentFun >= maxFun)
+        {
+            currentFun = maxFun;
+            funBar.SetFun(currentFun);
+        }
+        else
+        {
+            currentFun += 15;
+            funBar.SetFun(currentFun);
+        }
+
     }
 
-    void Walk(int energyValue)
+    public void DecreaseFunValue(int funValue)
     {
-        currentEnergy -= 10;
-        energyBar.SetEnergy(currentEnergy);
+        if (currentFun <= 0)
+        {
+            currentFun = 0;
+            funBar.SetFun(currentFun);
+        }
+        else
+        {
+            currentFun -= 10;
+            funBar.SetFun(currentFun);
+        }
+
+
+
+
+    }
+
+
+    public void Walk(int energyValue)
+    {
+
+        if (currentHungry >= maxHungry)
+        {
+            currentHungry = maxHungry;
+            energyBar.SetEnergy(currentEnergy);
+        }
+        else
+        {
+            currentEnergy += 15;
+            energyBar.SetEnergy(currentEnergy);
+        }
+
     } 
 
-    void Wash(int washValue)
+    public void DecreaseEnergyValue(int energyValue)
     {
-        currentHygiene -= 10;
-        hygieneBar.SetHygiene(currentHygiene);
+        if (currentEnergy <= 0)
+        {
+            currentEnergy = 0;
+            energyBar.SetEnergy(currentEnergy);
+        }
+        else
+        {
+            currentEnergy -= 5;
+            energyBar.SetEnergy(currentEnergy);
+        }
+
+    }
+
+    public void Wash(int hygieneValue)
+    {
+
+        if (currentHygiene >= maxHygiene)
+        {
+            currentHygiene = maxHygiene;
+            hygieneBar.SetHygiene(currentHygiene);
+        }
+        else
+        {
+            currentHygiene += 20;
+            hygieneBar.SetHygiene(currentHygiene);
+        }
+
+    }
+
+    public void DecreaseHygieneValue(int hyGieneValue)
+    {
+        if (currentHygiene <= 0)
+        {
+            currentEnergy = 0;
+            hygieneBar.SetHygiene(currentHygiene);
+        }
+        else
+        {
+            currentHygiene -= 10;
+            hygieneBar.SetHygiene(currentHygiene);
+        }
+
     }
 
 }

@@ -10,16 +10,16 @@ public class EnergyBar : MonoBehaviour
     public Image fill;
 
     // Start is called before the first frame update
-    public void SetMaxEnergy(int energy)
+    public void SetMaxEnergy(int energyValue)
     {
-        slider.maxValue = energy;
-        slider.value = energy;
+        slider.maxValue = energyValue;
+        slider.value = energyValue;
 
         fill.color = gradient.Evaluate(1f);
     }
-    public void SetEnergy(int energy)
+    public void SetEnergy(int energyValue)
     {
-        slider.value = energy;
+        slider.value = energyValue;
 
         fill.color = gradient.Evaluate(slider.normalizedValue);
     }

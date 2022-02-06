@@ -12,11 +12,22 @@ public class PlayerEnergyUI : MonoBehaviour
     public Sprite fullEnergyIcons;
     public Sprite emptyEnergyIcons;
 
+    public bool spendingEnergy;
+    public bool regainingEnergy;
+
+
+
+    private void Start()
+    {
+        energy = energyIcons.Length;
+
+    }
     void Update()
     {
         if(energy > numOfEnergy)
         {
             energy = numOfEnergy;
+
         }
 
 
@@ -40,6 +51,23 @@ public class PlayerEnergyUI : MonoBehaviour
                 energyIcons[i].enabled = false;
             }
         }
+
+
+
+
+
+    }
+
+    public void EnergySpending(int playerEnergyValue)
+    {
+        energy -= playerEnergyValue;
+        Debug.Log(energy);
+    }
+
+
+    public void EnergyRegaining(int playerEnergyValue)
+    {
+        energy += playerEnergyValue;
     }
 
 
