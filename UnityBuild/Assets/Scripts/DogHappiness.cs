@@ -6,10 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class DogHappiness : MonoBehaviour
 {
-    public int maxHungry = 100;
-    public int currentHungry;
-    bool isFeeding = false;
-    public HungryBar hungryBar;
+
 
     public float petHappiness = 50;
     public float walkHappiness = 50;
@@ -41,8 +38,7 @@ public class DogHappiness : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentHungry = maxHungry;
-        hungryBar.SetMaxHungry(maxHungry);
+       
     }
 
     // Update is called once per frame
@@ -51,10 +47,7 @@ public class DogHappiness : MonoBehaviour
         DogHappinessControls();
         ShowValues();
         Nap();
-        if (isFeeding == true)
-        {
-            Feed(10);
-        }
+      
     }
 
     void DogHappinessControls()
@@ -131,7 +124,7 @@ public class DogHappiness : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.D))
         {
-            isFeeding = true;
+         
                  
             hoursDecrease = 0.25f;
             energyDecrease = 5;
@@ -268,9 +261,5 @@ public class DogHappiness : MonoBehaviour
 
     }
 
-    void Feed(int feedValue)
-    {
-        currentHungry -= 10;
-        hungryBar.SetHungry(currentHungry);
-    }
+
 }
