@@ -34,8 +34,9 @@ public class DogMovement : MonoBehaviour
     {
         curPosition = this.transform.position.x;
         directionX = curPosition - oriPosition;
+        oriPosition = curPosition;
 
-        if(directionX < 0)
+        if (directionX < 0)
         {
             direction = FacingDirection.Right;
             
