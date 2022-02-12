@@ -15,6 +15,12 @@ public class PlayerEnergyUI : MonoBehaviour
     public bool spendingEnergy;
     public bool regainingEnergy;
 
+    public GameObject FeedButton;
+    public GameObject PetButton;
+    public GameObject WalkButton;
+    public GameObject WashButton;
+    public GameObject StudyButton;
+
 
 
     private void Start()
@@ -62,12 +68,35 @@ public class PlayerEnergyUI : MonoBehaviour
     {
         energy -= playerEnergyValue;
         Debug.Log(energy);
+
+        if(energy<= 0)
+        {
+            FeedButton.SetActive(false);
+            PetButton.SetActive(false);
+            WalkButton.SetActive(false);
+            WashButton.SetActive(false);
+            StudyButton.SetActive(false);
+
+        }
+
     }
 
 
     public void EnergyRegaining(int playerEnergyValue)
     {
         energy += playerEnergyValue;
+        
+        if(energy > 0)
+        {
+            FeedButton.SetActive(true);
+            PetButton.SetActive(true);
+            WalkButton.SetActive(true);
+            WashButton.SetActive(true);
+            StudyButton.SetActive(true);
+        }
+
+
+        
     }
 
 
