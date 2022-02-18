@@ -6,20 +6,28 @@ using UnityEngine.UI;
 public class PlayerEnergyUI : MonoBehaviour
 {
     public int energy;
+    public int homeworkLeft;
     public int numOfEnergy;
+    public int numOfHomeworkLeft;
 
     public Image[] energyIcons;
+    public Image[] homeworkIcons;
     public Sprite fullEnergyIcons;
+    public Sprite fullHomeIcons;
     public Sprite emptyEnergyIcons;
+    public Sprite emptyHomeworkIcons;
 
     public bool spendingEnergy;
+    public bool isDoingHomework;
     public bool regainingEnergy;
+    public bool isPassTheDay;
 
     public GameObject FeedButton;
     public GameObject PetButton;
     public GameObject WalkButton;
     public GameObject WashButton;
     public GameObject StudyButton;
+ 
 
 
 
@@ -37,7 +45,7 @@ public class PlayerEnergyUI : MonoBehaviour
         }
 
 
-        for( int i =0; i < energyIcons.Length; i++)
+        for( int i = 0; i < energyIcons.Length; i++)
         {
             if(i < energy)
             {
@@ -55,6 +63,31 @@ public class PlayerEnergyUI : MonoBehaviour
             else
             {
                 energyIcons[i].enabled = false;
+            }
+        }
+
+        if(homeworkLeft > numOfHomeworkLeft)
+        {
+            homeworkLeft = numOfHomeworkLeft;
+        }
+
+        for( int i = 0; i < homeworkIcons.Length; i++)
+        {
+            if(i < homeworkLeft)
+            {
+                homeworkIcons[i].sprite = fullHomeIcons;
+            }
+            else
+            {
+                homeworkIcons[i].sprite = emptyHomeworkIcons;
+            }
+            if(i < numOfHomeworkLeft)
+            {
+                homeworkIcons[i].enabled = true;
+            }
+            else
+            {
+                homeworkIcons[i].enabled = false;
             }
         }
 
@@ -98,6 +131,13 @@ public class PlayerEnergyUI : MonoBehaviour
 
         
     }
+
+    public void DoingHomework(int homeworkValue)
+    {
+        homeworkLeft -= homeworkValue;
+    }
+
+  
 
 
 }

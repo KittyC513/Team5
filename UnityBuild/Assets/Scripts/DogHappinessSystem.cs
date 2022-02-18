@@ -138,7 +138,7 @@ public class DogHappinessSystem : MonoBehaviour
         }
         else
         {
-            currentEnergy += 15;
+            currentEnergy += energyValue;
             energyBar.SetEnergy(currentEnergy);
         }
 
@@ -153,7 +153,7 @@ public class DogHappinessSystem : MonoBehaviour
         }
         else
         {
-            currentEnergy -= 5;
+            currentEnergy -= energyValue;
             energyBar.SetEnergy(currentEnergy);
         }
 
@@ -169,7 +169,7 @@ public class DogHappinessSystem : MonoBehaviour
         }
         else
         {
-            currentHygiene += 20;
+            currentHygiene += hygieneValue;
             hygieneBar.SetHygiene(currentHygiene);
         }
 
@@ -184,7 +184,7 @@ public class DogHappinessSystem : MonoBehaviour
         }
         else
         {
-            currentHygiene -= 10;
+            currentHygiene -= hyGieneValue;
             hygieneBar.SetHygiene(currentHygiene);
         }
 
