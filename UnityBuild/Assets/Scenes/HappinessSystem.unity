@@ -198,6 +198,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 20052873}
   m_CullTransparentMesh: 1
+--- !u!1 &27038564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 27038566}
+  - component: {fileID: 27038565}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &27038565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27038564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3ba9003d14c2a442847b6880f0a2d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentHungry: 100
+  _currentEnergy: 100
+  _currentHygiene: 100
+  _currentFun: 100
+  _playerEnergy: 7
+  _currentHomeworkLeft: 3
+  _dayCount: 1
+--- !u!4 &27038566
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27038564}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 810.00024, y: 707.5067, z: 54.780884}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &45174978
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,7 +757,7 @@ GameObject:
   - component: {fileID: 310849558}
   - component: {fileID: 310849557}
   m_Layer: 5
-  m_Name: NapButton
+  m_Name: SleepButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -785,6 +835,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 825908856}
+        m_TargetAssemblyTypeName: PlayerEnergyUI, Assembly-CSharp
+        m_MethodName: EnhanceHomework
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5691,6 +5753,8 @@ MonoBehaviour:
   maxHygiene: 100
   currentHygiene: 0
   hygieneBar: {fileID: 455951670}
+  playerEnergyUI: {fileID: 825908856}
+  calenderSystem: {fileID: 2135004391}
 --- !u!1 &1759101152
 GameObject:
   m_ObjectHideFlags: 0
@@ -6887,7 +6951,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ed06c40bb505f45ba61d6bb882539e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dogHappySystem: {fileID: 1689233023}
+  playerEnergyUI: {fileID: 825908856}
   DateText: {fileID: 2122583462}
+  dayCount: 1
 --- !u!1 &2135573696
 GameObject:
   m_ObjectHideFlags: 0

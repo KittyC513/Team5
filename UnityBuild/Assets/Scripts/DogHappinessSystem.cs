@@ -21,6 +21,9 @@ public class DogHappinessSystem : MonoBehaviour
     public int currentHygiene;
     public HygieneBar hygieneBar;
 
+    public PlayerEnergyUI playerEnergyUI;
+    public CalenderSystem calenderSystem;
+
 
 
 
@@ -28,6 +31,7 @@ public class DogHappinessSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         currentHungry = maxHungry;
         hungryBar.SetMaxHungry(maxHungry);
 
@@ -40,11 +44,11 @@ public class DogHappinessSystem : MonoBehaviour
         currentHygiene = maxHygiene;
         hygieneBar.SetMaxHygiene(maxHygiene);
 
+        SaveManager.Instance.LoadGame(this, playerEnergyUI, calenderSystem);
+        
 
 
 
-
-      
 
     }
 
@@ -189,5 +193,4 @@ public class DogHappinessSystem : MonoBehaviour
         }
 
     }
-
 }

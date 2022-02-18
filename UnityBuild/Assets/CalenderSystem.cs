@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class CalenderSystem : MonoBehaviour
 {
+    public DogHappinessSystem dogHappySystem;
+    public PlayerEnergyUI playerEnergyUI;
     public Text DateText;
-    int dayCount = 1;
+    public int dayCount = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +24,11 @@ public class CalenderSystem : MonoBehaviour
 
     public void PassADay()
     {
-        SceneManager.LoadScene(3);
         dayCount += 1;
 
+        SaveManager.Instance.SaveGame(dogHappySystem, playerEnergyUI, this);
+        SceneManager.LoadScene(3);
+
+        
     }
 }

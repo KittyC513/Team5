@@ -18,8 +18,9 @@ public class Day2 : MonoBehaviour
     }
 
 
-    public void BackMainMenu()
+    public void BackMainScene()
     {
         SceneManager.LoadScene(0);
+
     }
 }

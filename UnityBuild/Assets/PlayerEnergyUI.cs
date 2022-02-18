@@ -27,6 +27,7 @@ public class PlayerEnergyUI : MonoBehaviour
     public GameObject WalkButton;
     public GameObject WashButton;
     public GameObject StudyButton;
+  
  
 
 
@@ -100,7 +101,7 @@ public class PlayerEnergyUI : MonoBehaviour
     public void EnergySpending(int playerEnergyValue)
     {
         energy -= playerEnergyValue;
-        Debug.Log(energy);
+        //Debug.Log(energy);
 
         if(energy<= 0)
         {
@@ -134,8 +135,26 @@ public class PlayerEnergyUI : MonoBehaviour
 
     public void DoingHomework(int homeworkValue)
     {
-        homeworkLeft -= homeworkValue;
+        if(homeworkLeft < 1)
+        {
+            StudyButton.SetActive(false);
+            Debug.Log(homeworkLeft);
+        }
+        else
+        {
+            StudyButton.SetActive(true);
+            homeworkLeft -= homeworkValue;
+        }
+        
     }
+
+
+    public void EnhanceHomework(int homeworkValue)
+    {
+        homeworkLeft += homeworkValue;
+    }
+
+ 
 
   
 
