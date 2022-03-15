@@ -16,5 +16,5 @@ MonoBehaviour:
   secret: strength fire
   _version: FirstTest
   _serverURL: https://dd-telemetry.herokuapp.com/
-  serverCommunication: 2
+  serverCommunication: 0
   debugLogging: 0
