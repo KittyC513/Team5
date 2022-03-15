@@ -74,11 +74,16 @@ public class DogHappinessSystem : MonoBehaviour
         {
             currentEnergy = maxEnergy;
             hungryBar.SetHungry(currentHungry);
+
+            TelemetryLogger.Log(this, "Feed");
         }
         else
         {
             currentHungry += 20;
             hungryBar.SetHungry(currentHungry);
+
+            TelemetryLogger.Log(this, "Feed");
+
         }
 
     }
@@ -89,6 +94,7 @@ public class DogHappinessSystem : MonoBehaviour
         {
             currentEnergy = 0;
             hungryBar.SetHungry(currentHungry);
+
         }
         else
         {
@@ -104,11 +110,15 @@ public class DogHappinessSystem : MonoBehaviour
         {
             currentFun = maxFun;
             funBar.SetFun(currentFun);
+
+            TelemetryLogger.Log(this, "Pet");
         }
         else
         {
             currentFun += 15;
             funBar.SetFun(currentFun);
+
+            TelemetryLogger.Log(this, "Pet");
         }
 
     }
@@ -139,11 +149,15 @@ public class DogHappinessSystem : MonoBehaviour
         {
             currentHungry = maxHungry;
             energyBar.SetEnergy(currentEnergy);
+
+            TelemetryLogger.Log(this, "Walk");
         }
         else
         {
             currentEnergy += energyValue;
             energyBar.SetEnergy(currentEnergy);
+
+            TelemetryLogger.Log(this, "Walk");
         }
 
     } 
@@ -170,11 +184,15 @@ public class DogHappinessSystem : MonoBehaviour
         {
             currentHygiene = maxHygiene;
             hygieneBar.SetHygiene(currentHygiene);
+
+            TelemetryLogger.Log(this, "Wash");
         }
         else
         {
             currentHygiene += hygieneValue;
             hygieneBar.SetHygiene(currentHygiene);
+
+            TelemetryLogger.Log(this, "Wash");
         }
 
     }

@@ -119,14 +119,18 @@ public class PlayerEnergyUI : MonoBehaviour
     public void EnergyRegaining(int playerEnergyValue)
     {
         energy += playerEnergyValue;
-        
-        if(energy > 0)
+
+        TelemetryLogger.Log(this, "Sleep");
+
+        if (energy > 0)
         {
             FeedButton.SetActive(true);
             PetButton.SetActive(true);
             WalkButton.SetActive(true);
             WashButton.SetActive(true);
             StudyButton.SetActive(true);
+
+
         }
 
 
@@ -139,11 +143,15 @@ public class PlayerEnergyUI : MonoBehaviour
         {
             StudyButton.SetActive(false);
             Debug.Log(homeworkLeft);
+
         }
         else
         {
             StudyButton.SetActive(true);
             homeworkLeft -= homeworkValue;
+            
+            TelemetryLogger.Log(this, "DoingHomework");
+
         }
         
     }
