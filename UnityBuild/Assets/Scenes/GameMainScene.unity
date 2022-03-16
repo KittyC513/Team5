@@ -6182,10 +6182,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 612e20e211d502040a3bf8d166dab77b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHungry: 100
+  maxHungry: 50
   currentHungry: 0
   hungryBar: {fileID: 1388986228}
-  maxFun: 100
+  maxFun: 50
   currentFun: 0
   funBar: {fileID: 2005228255}
   maxEnergy: 100

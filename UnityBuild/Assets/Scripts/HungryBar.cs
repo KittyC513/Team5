@@ -13,7 +13,7 @@ public class HungryBar : MonoBehaviour
   
     public void SetMaxHungry(int hungry)
     {
-        slider.maxValue = hungry;
+        hungry = 50;
         slider.value = hungry;
 
         fill.color = gradient.Evaluate(1f);
