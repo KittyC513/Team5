@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SaveManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class SaveManager : MonoBehaviour
     public int _currentHomeworkLeft = 2;
     public int _dayCount = 1;
   
+
     
     public static SaveManager Instance { get; private set; }
     private void Awake()
@@ -59,6 +61,22 @@ public class SaveManager : MonoBehaviour
         playerEnergyUI.homeworkLeft = _currentHomeworkLeft;
 
         calenderSystem.dayCount = _dayCount;
+    }
+
+    public void LoadEnding()
+    {
+        float totalHappiness = _currentFun + _currentHungry + _currentHygiene;
+
+        Debug.Log(_dayCount);
+        Debug.Log(totalHappiness);
+
+        if (_dayCount >= 4)
+        {
+            if (_currentHomeworkLeft > 5 && totalHappiness > 200)
+            {
+                SceneManager.LoadScene("DogStaysPlayerHasNoJob");
+            }
+        }
     }
 
 }
