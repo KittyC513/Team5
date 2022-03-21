@@ -14,6 +14,9 @@ public class Dialogue : MonoBehaviour
 
     public GameObject continueButton;
 
+    public GameObject image1;
+    public GameObject image2;
+
     public PlayerEnergyUI playerEnergyUI;
     public CalenderSystem calenderSystem;
     public DogHappinessSystem dogHappinessSystem;
@@ -65,6 +68,22 @@ public class Dialogue : MonoBehaviour
             continueButton.SetActive(false);
             moveToNextDay = true;
         }
+    }
+
+    public void SwitchImage()
+    {
+        if (index > 1)
+        {
+            image1.SetActive(false);
+            image2.SetActive(true);
+        }
+
+        if (index > 9)
+        {
+            image1.SetActive(true);
+            image2.SetActive(false);
+        }
+
     }
 
 
